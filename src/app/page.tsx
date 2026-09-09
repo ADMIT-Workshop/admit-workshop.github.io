@@ -6,10 +6,7 @@ import { News } from "@/components/News";
 import { Organizers } from "@/components/Organizers";
 import { Participation } from "@/components/Participation";
 import { Program } from "@/components/Program";
-import { ResearchPillars } from "@/components/ResearchPillars";
-import { ResearchVision } from "@/components/ResearchVision";
 import { Speakers } from "@/components/Speakers";
-import { Topics } from "@/components/Topics";
 import { Venue } from "@/components/Venue";
 
 export default function Home() {
@@ -18,12 +15,9 @@ export default function Home() {
       <Hero />
       <News />
       <About />
-      <ResearchVision />
-      <ResearchPillars />
-      <Topics />
+      <Speakers />
       <ImportantDates />
       <Participation />
-      <Speakers />
       <Program />
       <Organizers />
       <Venue />
