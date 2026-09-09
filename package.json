@@ -1,33 +1,33 @@
 {
-  "name": "nextly-template",
+  "name": "admit-workshop.github.io",
   "version": "2.0.0",
-  "description": "Nextly Landing Page Template",
+  "description": "Official website for the ADMIT Workshop",
   "private": true,
+  "packageManager": "yarn@1.22.22",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/web3templates/nextly-template"
+    "url": "https://github.com/admit-workshop/admit-workshop.github.io"
   },
   "keywords": [
     "nextjs",
     "tailwindcss",
     "free"
   ],
-  "author": "Surjith S M",
-  "license": "ISC",
+  "author": "ADMIT Workshop organizers",
+  "license": "MIT",
   "dependencies": {
     "@headlessui/react": "^2.0.3",
     "@heroicons/react": "^2.1.3",
     "next": "14.2.3",
     "next-themes": "^0.3.0",
     "react": "^18",
-    "react-dom": "^18",
-    "react-hook-form": "^7.51.4"
+    "react-dom": "^18"
   },
   "devDependencies": {
     "@types/node": "^20",
