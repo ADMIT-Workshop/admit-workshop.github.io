@@ -5,12 +5,25 @@ import "./globals.css";
 
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { workshop } from "@/data/workshop";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "ADMIT Workshop",
-  description: "Official website for the ADMIT Workshop.",
+  metadataBase: new URL(workshop.seo.siteUrl),
+  title: workshop.seo.title,
+  description: workshop.seo.description,
+  keywords: workshop.seo.keywords,
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    url: workshop.seo.siteUrl,
+    siteName: workshop.acronym,
+    title: workshop.seo.title,
+    description: workshop.seo.description,
+  },
 };
 
 export default function RootLayout({
@@ -23,7 +36,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <ThemeProvider attribute="class">
           <Navbar />
-          <div>{children}</div>
+          {children}
           <Footer />
         </ThemeProvider>
       </body>

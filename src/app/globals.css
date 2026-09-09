@@ -2,12 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 @layer base {
-  html,
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
-    @apply dark:bg-trueGray-900;
+    @apply bg-white text-gray-800 antialiased dark:bg-trueGray-900 dark:text-gray-100;
   }
 }
-
