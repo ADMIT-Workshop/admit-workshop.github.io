@@ -3,7 +3,7 @@ import { workshop } from "@/data/workshop";
 
 export function Hero() {
   return (
-    <section id="top" className="py-16 sm:py-24">
+    <section id="top" className="pt-0 pb-16 sm:pt-4 sm:pb-24">
       <Container className="flex flex-col items-start">
         <h1 className="max-w-4xl text-3xl font-bold leading-tight tracking-tight text-gray-900 dark:text-white sm:text-4xl lg:text-5xl">
           {workshop.fullTitle}.
