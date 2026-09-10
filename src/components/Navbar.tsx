@@ -7,12 +7,13 @@ import { visibleNavigation, workshop } from "@/data/workshop";
 export function Navbar() {
   return (
     <header className="w-full border-b border-gray-100 bg-white/95 dark:border-trueGray-800 dark:bg-trueGray-900/95">
-      <Disclosure as="nav" className="container mx-auto px-8 py-5 xl:px-0">
+      <Disclosure as="nav" aria-label="Main navigation" className="container mx-auto px-8 py-5 xl:px-0">
         {({ open, close }) => (
           <>
             <div className="flex items-center justify-between">
               <Link
                 href="/#top"
+                aria-label="ADMIT Workshop home"
                 className="flex items-baseline gap-3 text-indigo-600 dark:text-indigo-400"
               >
                 <span className="text-2xl font-bold">{workshop.acronym}</span>

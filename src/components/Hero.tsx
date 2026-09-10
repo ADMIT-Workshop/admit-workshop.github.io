@@ -3,10 +3,10 @@ import { workshop } from "@/data/workshop";
 
 export function Hero() {
   return (
-    <section id="top" className="pt-0 pb-16 sm:pt-4 sm:pb-24">
+    <section id="top" aria-labelledby="workshop-title" className="pt-0 pb-16 sm:pt-4 sm:pb-24">
       <Container className="flex flex-col items-start">
-        <h1 className="max-w-4xl text-3xl font-bold leading-tight tracking-tight text-gray-900 dark:text-white sm:text-4xl lg:text-5xl">
-          {workshop.fullTitle}.
+        <h1 id="workshop-title" className="max-w-4xl text-3xl font-bold leading-tight tracking-tight text-gray-900 dark:text-white sm:text-4xl lg:text-5xl">
+          {workshop.acronym} — {workshop.fullTitle}
         </h1>
         <p className="mt-6 max-w-3xl text-lg leading-8 text-gray-600 dark:text-gray-300">
           {workshop.tagline}
@@ -48,7 +48,7 @@ export function Hero() {
           rel="noopener noreferrer"
           className="mt-10 text-sm font-bold tracking-wider text-indigo-600 uppercase hover:text-indigo-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 dark:text-indigo-400"
         >
-          WORKSHOP AT HIPEAC27
+          Workshop at {workshop.event.name}
           <span aria-hidden="true">&nbsp;↗</span>
         </a>
       </Container>

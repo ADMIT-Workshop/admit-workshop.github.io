@@ -115,7 +115,12 @@ export interface WorkshopData {
     title: string;
     description: string;
     siteUrl: string;
-    keywords: string[];
+    image: {
+      path: string;
+      width: number;
+      height: number;
+      alt: string;
+    };
   };
 }
 
@@ -127,7 +132,7 @@ export const workshop: WorkshopData = {
   fullTitle:
     "Accountable Decision-Making and Integrated Trust for Autonomous AI Systems",
   tagline:
-    "Connecting responsible AI, security, and hardware for accountable autonomous systems.",
+    "The ADMIT Workshop at HiPEAC 2027 connects accountable AI, AI security, and hardware security for trustworthy autonomous systems.",
   event: {
     name: "HiPEAC 2027",
     dates: "18–20 January 2027",
@@ -264,7 +269,7 @@ export const workshop: WorkshopData = {
   },
   links: {
     officialWorkshop: {
-      label: "Official HiPEAC listing",
+      label: "ADMIT Workshop on HiPEAC",
       href: officialWorkshopHref,
     },
     event: {
@@ -274,20 +279,16 @@ export const workshop: WorkshopData = {
   },
   seo: {
     title:
-      "ADMIT | Accountable Decision-Making and Integrated Trust for Autonomous AI Systems",
+      "ADMIT Workshop at HiPEAC 2027 | Accountable & Trustworthy AI",
     description:
-      "ADMIT at HiPEAC 2027 explores responsible AI, security, and hardware for accountable autonomous systems and safe mobility.",
+      "ADMIT Workshop at HiPEAC 2027 explores accountable decision-making, trustworthy autonomous AI systems, AI security, and hardware security in Glasgow.",
     siteUrl: "https://admit-workshop.github.io/",
-    keywords: [
-      "ADMIT workshop",
-      "HiPEAC 2027",
-      "accountable AI",
-      "autonomous systems",
-      "responsible AI",
-      "automotive security",
-      "hardware security",
-      "real-time enforcement",
-    ],
+    image: {
+      path: "/share-image.png",
+      width: 1200,
+      height: 630,
+      alt: "ADMIT Workshop at HiPEAC 2027 — Accountable Decision-Making and Integrated Trust for Autonomous AI Systems",
+    },
   },
 };
 

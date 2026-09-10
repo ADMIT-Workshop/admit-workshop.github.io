@@ -26,7 +26,7 @@ export function Venue() {
               {section.summary}
             </p>
           </div>
-          <address className="not-italic leading-7 text-gray-600 dark:text-gray-300">
+          <p className="leading-7 text-gray-600 dark:text-gray-300">
             <span className="font-semibold text-gray-900 dark:text-white">
               Room {workshop.venue.room}
             </span>
@@ -38,7 +38,7 @@ export function Venue() {
             {workshop.venue.city} {workshop.venue.postalCode}
             <br />
             {workshop.venue.country}
-          </address>
+          </p>
         </div>
       )}
     </Section>

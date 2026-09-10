@@ -36,7 +36,7 @@ export function News() {
                   rel="noopener noreferrer"
                   className="mt-4 inline-flex font-medium text-indigo-600 hover:text-indigo-500 dark:text-indigo-400"
                 >
-                  Read more<span aria-hidden="true">&nbsp;↗</span>
+                  Read more about {item.title}<span aria-hidden="true">&nbsp;↗</span>
                 </a>
               )}
             </article>

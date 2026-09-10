@@ -10,18 +10,12 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL(workshop.seo.siteUrl),
-  title: workshop.seo.title,
-  description: workshop.seo.description,
-  keywords: workshop.seo.keywords,
-  alternates: {
-    canonical: "/",
-  },
-  openGraph: {
-    type: "website",
-    url: workshop.seo.siteUrl,
-    siteName: workshop.acronym,
-    title: workshop.seo.title,
-    description: workshop.seo.description,
+  icons: {
+    icon: [
+      { url: "/favicon.ico", type: "image/x-icon", sizes: "48x48" },
+      { url: "/favicon.svg", type: "image/svg+xml", sizes: "any" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
   },
 };
 
@@ -33,6 +27,12 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body className={inter.className}>
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-md focus:bg-indigo-600 focus:px-4 focus:py-2 focus:text-white"
+        >
+          Skip to main content
+        </a>
         <Navbar />
         {children}
         <Footer />

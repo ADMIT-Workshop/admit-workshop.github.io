@@ -10,6 +10,7 @@ export function Footer() {
           <div>
             <Link
               href="/#top"
+              aria-label="ADMIT Workshop home"
               className="text-2xl font-bold text-indigo-600 dark:text-indigo-400"
             >
               {workshop.acronym}

@@ -21,6 +21,7 @@ export function Section({
   return (
     <section
       id={id}
+      aria-labelledby={`${id}-heading`}
       className={`scroll-mt-36 py-12 sm:py-16 ${
         muted ? "bg-gray-50 dark:bg-trueGray-800/40" : ""
       }`}
@@ -30,7 +31,7 @@ export function Section({
           <p className="text-sm font-bold tracking-wider text-indigo-600 uppercase dark:text-indigo-400">
             {eyebrow}
           </p>
-          <h2 className="mt-3 text-3xl font-bold tracking-tight text-gray-800 dark:text-white sm:text-4xl">
+          <h2 id={`${id}-heading`} className="mt-3 text-3xl font-bold tracking-tight text-gray-800 dark:text-white sm:text-4xl">
             {title}
           </h2>
           {intro && (
