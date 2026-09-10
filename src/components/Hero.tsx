@@ -6,7 +6,7 @@ export function Hero() {
     <section id="top" aria-labelledby="workshop-title" className="pt-0 pb-16 sm:pt-4 sm:pb-24">
       <Container className="flex flex-col items-start">
         <h1 id="workshop-title" className="max-w-4xl text-3xl font-bold leading-tight tracking-tight text-gray-900 dark:text-white sm:text-4xl lg:text-5xl">
-          {workshop.acronym} — {workshop.fullTitle}
+          {workshop.fullTitle}
         </h1>
         <p className="mt-6 max-w-3xl text-lg leading-8 text-gray-600 dark:text-gray-300">
           {workshop.tagline}
