@@ -175,7 +175,7 @@ export const workshop: WorkshopData = {
       id: "news",
       eyebrow: "Updates",
       title: "News",
-      status: "tba",
+      status: "hidden",
       tbaMessage: "Workshop announcements will be posted here.",
       items: [],
     },

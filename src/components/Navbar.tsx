@@ -16,10 +16,7 @@ export function Navbar() {
                 aria-label="ADMIT Workshop home"
                 className="flex items-baseline gap-3 text-indigo-600 dark:text-indigo-400"
               >
-                <span className="text-2xl font-bold">{workshop.acronym}</span>
-                <span className="hidden text-sm font-medium text-gray-500 dark:text-gray-400 sm:inline">
-                  {workshop.event.name}
-                </span>
+                <span className="text-2xl font-bold">{workshop.acronym}27</span>
               </Link>
 
               <div className="flex items-center gap-5">
