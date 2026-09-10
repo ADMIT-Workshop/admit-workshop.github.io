@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { Disclosure } from "@headlessui/react";
-import ThemeChanger from "@/components/DarkSwitch";
 import { visibleNavigation, workshop } from "@/data/workshop";
 
 export function Navbar() {
@@ -23,7 +22,6 @@ export function Navbar() {
               </Link>
 
               <div className="flex items-center gap-5">
-                <ThemeChanger />
                 <Disclosure.Button
                   aria-label="Toggle navigation"
                   className="rounded-md p-2 text-gray-500 hover:text-indigo-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 dark:text-gray-300 lg:hidden"
