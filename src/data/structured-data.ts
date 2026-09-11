@@ -33,9 +33,10 @@ export const workshopStructuredData = {
       url: siteUrl,
       sameAs: workshop.links.officialWorkshop.href,
       image: new URL(workshop.seo.image.path, siteUrl).href,
-      // The workshop day is confirmed. Add clock times only once their
-      // timezone is confirmed; the HiPEAC feed currently uses a different offset.
-      startDate: workshop.schedule.dateIso,
+      // Publish a machine-readable date only once the workshop day is confirmed.
+      ...(workshop.schedule.dateIso && {
+        startDate: workshop.schedule.dateIso,
+      }),
       eventStatus: "https://schema.org/EventScheduled",
       eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
       inLanguage: "en",

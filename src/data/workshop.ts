@@ -72,7 +72,7 @@ export interface WorkshopData {
   };
   schedule: {
     date: string;
-    dateIso: string;
+    dateIso?: string;
     time: string;
   };
   venue: {
@@ -139,9 +139,8 @@ export const workshop: WorkshopData = {
     href: "https://www.hipeac.net/2027/glasgow/",
   },
   schedule: {
-    date: "Monday, 18 January 2027",
-    dateIso: "2027-01-18",
-    time: "14:00–17:30",
+    date: "TBD",
+    time: "TBD",
   },
   venue: {
     name: "Scottish Event Campus (SEC)",
@@ -197,9 +196,9 @@ export const workshop: WorkshopData = {
       items: [
         {
           label: "ADMIT workshop",
-          date: "Monday, 18 January 2027",
-          time: "14:00–17:30",
-          status: "confirmed",
+          date: "TBD",
+          time: "TBD",
+          status: "tba",
         },
       ],
       note: "Submission and participation dates are to be announced.",

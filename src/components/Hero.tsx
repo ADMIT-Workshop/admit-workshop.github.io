@@ -18,9 +18,13 @@ export function Hero() {
               Date
             </dt>
             <dd className="mt-2 font-medium text-gray-900 dark:text-white">
-              <time dateTime={workshop.schedule.dateIso}>
-                {workshop.schedule.date}
-              </time>
+              {workshop.schedule.dateIso ? (
+                <time dateTime={workshop.schedule.dateIso}>
+                  {workshop.schedule.date}
+                </time>
+              ) : (
+                workshop.schedule.date
+              )}
             </dd>
           </div>
           <div className="rounded-xl border border-gray-200 p-5 dark:border-trueGray-700">

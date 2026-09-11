@@ -24,7 +24,7 @@ export function ImportantDates() {
                 </dt>
                 <dd className="text-gray-600 dark:text-gray-300 sm:text-right">
                   {item.status === "tba" ? (
-                    "To be announced"
+                    "TBD"
                   ) : (
                     <>
                       {item.date}
