@@ -144,7 +144,7 @@ export const workshop: WorkshopData = {
   },
   venue: {
     name: "Scottish Event Campus (SEC)",
-    room: "Etive",
+    room: "TBD",
     address: "Exhibition Way",
     city: "Glasgow",
     postalCode: "G3 8YW",
@@ -253,7 +253,7 @@ export const workshop: WorkshopData = {
       title: "Venue",
       status: "published",
       summary:
-        "ADMIT will take place in room Etive at the Scottish Event Campus in Glasgow.",
+        "ADMIT will take place at the Scottish Event Campus in Glasgow. Room: TBD.",
     },
     contact: {
       id: "contact",

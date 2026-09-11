@@ -48,7 +48,9 @@ export const workshopStructuredData = {
       ...(workshop.sections.venue.status === "published" && {
         location: {
           "@type": "Place",
-          name: `${workshop.venue.name}, Room ${workshop.venue.room}`,
+          name: workshop.venue.room === "TBD"
+            ? workshop.venue.name
+            : `${workshop.venue.name}, Room ${workshop.venue.room}`,
           address: {
             "@type": "PostalAddress",
             streetAddress: workshop.venue.address,
