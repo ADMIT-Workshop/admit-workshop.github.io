@@ -33,9 +33,14 @@ export function Organizers() {
                   organizer.name
                 )}
               </h3>
-              <p className="mt-2 text-gray-600 dark:text-gray-300">
-                {organizer.affiliation}
+              <p className="mt-2 font-medium text-indigo-600 dark:text-indigo-400">
+                {organizer.role}
               </p>
+              {organizer.affiliation && (
+                <p className="mt-1 text-gray-600 dark:text-gray-300">
+                  {organizer.affiliation}
+                </p>
+              )}
             </article>
           ))}
         </div>

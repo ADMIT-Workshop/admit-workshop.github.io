@@ -65,10 +65,13 @@ export const workshopStructuredData = {
           "@type": "Person",
           name: organizer.name,
           url: organizer.href,
-          affiliation: {
-            "@type": "Organization",
-            name: organizer.affiliation,
-          },
+          jobTitle: organizer.role,
+          ...(organizer.affiliation && {
+            affiliation: {
+              "@type": "Organization",
+              name: organizer.affiliation,
+            },
+          }),
         })),
       }),
     },

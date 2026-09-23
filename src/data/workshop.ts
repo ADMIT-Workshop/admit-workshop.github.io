@@ -50,7 +50,8 @@ export interface Speaker {
 
 export interface Organizer {
   name: string;
-  affiliation: string;
+  role: string;
+  affiliation?: string;
   href?: string;
 }
 
@@ -237,13 +238,20 @@ export const workshop: WorkshopData = {
       items: [
         {
           name: "Pedro Trancoso",
+          role: "Workshop Chair",
           affiliation: "Chalmers University of Technology",
           href: "https://www.hipeac.net/~pedro/",
         },
         {
           name: "Magnus Almgren",
+          role: "Workshop Chair",
           affiliation: "Chalmers University of Technology",
           href: "https://www.hipeac.net/~magnus.almgren9/",
+        },
+        {
+          name: "Luigi Altamura",
+          role: "Web Chair",
+          href: "https://www.linkedin.com/in/luigi-altamura/",
         },
       ],
     },
