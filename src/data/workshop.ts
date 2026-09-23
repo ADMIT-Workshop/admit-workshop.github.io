@@ -251,6 +251,7 @@ export const workshop: WorkshopData = {
         {
           name: "Luigi Altamura",
           role: "Web Chair",
+          affiliation: "Chalmers University of Technology",
           href: "https://www.linkedin.com/in/luigi-altamura/",
         },
       ],
