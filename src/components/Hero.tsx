@@ -47,7 +47,7 @@ export function Hero() {
         </dl>
 
         <a
-          href={workshop.event.href}
+          href={workshop.links.officialWorkshop.href}
           target="_blank"
           rel="noopener noreferrer"
           className="mt-10 text-sm font-bold tracking-wider text-indigo-600 uppercase hover:text-indigo-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 dark:text-indigo-400"
