@@ -22,7 +22,7 @@ export function Participation() {
       ) : (
         <div className="max-w-3xl leading-7 text-gray-600 dark:text-gray-300">
           {section.summary && <p>{section.summary}</p>}
-          <div className="mt-5 flex flex-wrap items-center gap-5">
+          <div className="mt-5 flex flex-col items-start gap-5">
             {section.submissionHref && (
               <a
                 href={section.submissionHref}
@@ -36,7 +36,7 @@ export function Participation() {
             {section.cfpPdfHref && (
               <a
                 href={section.cfpPdfHref}
-                className="font-medium text-indigo-600 underline hover:text-indigo-500 dark:text-indigo-400"
+                className="text-sm font-bold tracking-wider text-indigo-600 uppercase hover:text-indigo-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 dark:text-indigo-400"
               >
                 CFP PDF (blank placeholder)
               </a>
