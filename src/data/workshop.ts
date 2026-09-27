@@ -95,6 +95,7 @@ export interface WorkshopData {
     participation: SectionBase & {
       summary?: string;
       submissionHref?: string;
+      cfpPdfHref?: string;
     };
     speakers: SectionBase & { items: Speaker[] };
     program: SectionBase & {
@@ -202,15 +203,17 @@ export const workshop: WorkshopData = {
           status: "tba",
         },
       ],
-      note: "Submission and participation dates are to be announced.",
+      note: "The submission deadline and participation dates are to be announced.",
     },
     participation: {
       id: "participation",
       eyebrow: "Contribute",
       title: "Call for Papers / Participation",
-      status: "tba",
-      tbaMessage:
-        "Submission and participation details have not yet been announced.",
+      status: "published",
+      summary:
+        "Submit your paper through EasyChair. The full Call for Papers PDF is coming soon.",
+      submissionHref: "https://easychair.org/conferences/?conf=admit2027",
+      cfpPdfHref: "/cfp.pdf",
     },
     speakers: {
       id: "speakers",
