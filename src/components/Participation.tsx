@@ -39,6 +39,7 @@ export function Participation() {
                 className="text-sm font-bold tracking-wider text-indigo-600 uppercase hover:text-indigo-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 dark:text-indigo-400"
               >
                 CFP PDF (blank placeholder)
+                <span aria-hidden="true">&nbsp;↗</span>
               </a>
             )}
           </div>
