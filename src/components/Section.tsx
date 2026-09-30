@@ -7,7 +7,6 @@ interface SectionProps {
   title: string;
   children: ReactNode;
   intro?: string;
-  muted?: boolean;
 }
 
 export function Section({
@@ -16,15 +15,12 @@ export function Section({
   title,
   children,
   intro,
-  muted = false,
 }: Readonly<SectionProps>) {
   return (
     <section
       id={id}
       aria-labelledby={`${id}-heading`}
-      className={`scroll-mt-36 py-12 sm:py-16 ${
-        muted ? "bg-gray-50 dark:bg-trueGray-800/40" : ""
-      }`}
+      className="scroll-mt-36 py-12 sm:py-16"
     >
       <Container>
         <div className="max-w-3xl">

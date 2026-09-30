@@ -12,7 +12,6 @@ export function Venue() {
       id={section.id}
       eyebrow={section.eyebrow}
       title={section.title}
-      muted
     >
       {section.status === "tba" ? (
         <TbaNotice message={section.tbaMessage ?? "Venue details are forthcoming."} />

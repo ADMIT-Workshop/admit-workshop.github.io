@@ -12,7 +12,6 @@ export function News() {
       id={section.id}
       eyebrow={section.eyebrow}
       title={section.title}
-      muted
     >
       {section.status === "tba" ? (
         <TbaNotice message={section.tbaMessage ?? "Updates are forthcoming."} />

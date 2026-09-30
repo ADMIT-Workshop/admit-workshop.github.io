@@ -13,7 +13,6 @@ export function Program() {
       eyebrow={section.eyebrow}
       title={section.title}
       intro={section.summary}
-      muted
     >
       {section.status === "tba" ? (
         <TbaNotice message={section.tbaMessage ?? "The program is forthcoming."} />

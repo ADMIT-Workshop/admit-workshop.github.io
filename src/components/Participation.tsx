@@ -12,7 +12,6 @@ export function Participation() {
       id={section.id}
       eyebrow={section.eyebrow}
       title={section.title}
-      muted
     >
       {section.status === "tba" ? (
         <TbaNotice
