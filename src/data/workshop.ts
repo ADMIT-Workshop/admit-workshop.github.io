@@ -141,12 +141,13 @@ export const workshop: WorkshopData = {
     href: "https://www.hipeac.net/2027/glasgow/",
   },
   schedule: {
-    date: "TBD",
-    time: "TBD",
+    date: "20 January 2027",
+    dateIso: "2027-01-20",
+    time: "14:00–17:30",
   },
   venue: {
     name: "Scottish Event Campus (SEC)",
-    room: "TBD",
+    room: "M4",
     address: "Exhibition Way",
     city: "Glasgow",
     postalCode: "G3 8YW",
@@ -198,9 +199,9 @@ export const workshop: WorkshopData = {
       items: [
         {
           label: "ADMIT workshop",
-          date: "TBD",
-          time: "TBD",
-          status: "tba",
+          date: "20 January 2027",
+          time: "14:00–17:30",
+          status: "confirmed",
         },
       ],
       note: "The submission deadline and participation dates are to be announced.",
@@ -265,7 +266,7 @@ export const workshop: WorkshopData = {
       title: "Venue",
       status: "published",
       summary:
-        "ADMIT will take place at the Scottish Event Campus in Glasgow. Room: TBD.",
+        "ADMIT will take place at the Scottish Event Campus in Glasgow. Room: M4.",
     },
     contact: {
       id: "contact",
