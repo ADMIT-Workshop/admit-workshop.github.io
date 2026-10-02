@@ -94,6 +94,7 @@ export interface WorkshopData {
     };
     participation: SectionBase & {
       summary?: string;
+      contributionTypes: { title: string; description: string }[];
       submissionHref?: string;
       cfpPdfHref?: string;
     };
@@ -187,8 +188,8 @@ export const workshop: WorkshopData = {
       title: "Accountability before actuation",
       status: "published",
       paragraphs: [
-        "Autonomous vehicles can improve safety and mobility, but failures can have severe consequences. A trustworthy system must recognize when an action is unreliable and move to a safe fallback before harm occurs.",
-        "That assurance is difficult in tightly coupled AI pipelines that combine heterogeneous sensors, safety-critical communication, and strict real-time constraints. ADMIT brings the full decision chain into view before a command reaches vehicle actuators.",
+        "Autonomous systems increasingly rely on AI for critical decisions, but failures can have severe consequences. A trustworthy system must recognize when an action is unreliable and move to a safe fallback before harm occurs.",
+        "That assurance is difficult in tightly coupled systems that combine AI, heterogeneous sensors, safety-critical communication, security mechanisms, hardware and software components, and strict real-time constraints. ADMIT brings the full decision chain into view, from AI-generated decisions to their execution in the physical world. Autonomous vehicles provide a key motivating example, but these challenges arise across autonomous and AI-enabled systems.",
       ],
     },
     importantDates: {
@@ -209,16 +210,27 @@ export const workshop: WorkshopData = {
     participation: {
       id: "participation",
       eyebrow: "Contribute",
-      title: "Call for Papers / Participation",
+      title: "Call for Contributions",
       status: "published",
       summary:
-        "Submit your paper through EasyChair. The full Call for Papers PDF is coming soon.",
+        "ADMIT welcomes informal contributions from both industry and academia, particularly:",
+      contributionTypes: [
+        {
+          title: "Work in progress",
+          description: "early-stage or exploratory ideas where feedback would help.",
+        },
+        {
+          title: "Lessons learned",
+          description:
+            "experience reports on building or deploying trustworthy, secure, or safety-critical autonomous and AI-enabled systems, including what worked, what did not, and why.",
+        },
+      ],
       submissionHref: "https://easychair.org/conferences/?conf=admit2027",
       cfpPdfHref: "/cfp.pdf",
     },
     speakers: {
       id: "speakers",
-      eyebrow: "Invited Programme",
+      eyebrow: "Programme",
       title: "Invited Speakers",
       status: "tba",
       tbaMessage: "Confirmed invited speakers will be announced here.",
@@ -231,7 +243,7 @@ export const workshop: WorkshopData = {
       status: "tba",
       tbaMessage: "The detailed workshop program is to be announced.",
       summary:
-        "The invited programme will connect AI, security, and hardware perspectives, with autonomous driving as the motivating application.",
+        "The programme will connect AI, security, software, and hardware perspectives across autonomous and AI-enabled systems, with autonomous driving as a key motivating application.",
       items: [],
     },
     organizers: {

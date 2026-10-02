@@ -21,6 +21,34 @@ export function Participation() {
       ) : (
         <div className="max-w-3xl leading-7 text-gray-600 dark:text-gray-300">
           {section.summary && <p>{section.summary}</p>}
+          <ul className="mt-4 list-disc space-y-2 pl-6">
+            {section.contributionTypes.map((type) => (
+              <li key={type.title}>
+                <strong>{type.title}:</strong> {type.description}
+              </li>
+            ))}
+          </ul>
+          <div className="mt-5 space-y-4">
+            <p>
+              Please submit a <strong>one-page PDF presentation proposal</strong>{" "}
+              containing the presentation title, author name(s) and
+              affiliation(s), and a short description of the challenge, insight,
+              or lesson you would like to discuss.
+            </p>
+            <p>
+              No template is required. There are <strong>no formal proceedings</strong>,
+              and previously published or presented material is welcome.
+            </p>
+            <p>
+              Please designate one author as the presenter when submitting. To
+              encourage broad participation and networking, we generally aim
+              for each person to present at most one contribution.
+            </p>
+            <p>
+              Presentations are <strong>onsite in Glasgow</strong>; remote
+              presentations will not be available.
+            </p>
+          </div>
           <div className="mt-5 flex flex-col items-start gap-5">
             {section.submissionHref && (
               <a
