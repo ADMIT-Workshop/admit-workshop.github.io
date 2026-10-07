@@ -50,6 +50,15 @@ export function Participation() {
             </p>
           </div>
           <div className="mt-5 flex flex-col items-start gap-5">
+            {section.cfpPdfHref && (
+              <a
+                href={section.cfpPdfHref}
+                className="text-sm font-bold tracking-wider text-indigo-600 uppercase hover:text-indigo-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 dark:text-indigo-400"
+              >
+                CFP PDF
+                <span aria-hidden="true">&nbsp;↗</span>
+              </a>
+            )}
             {section.submissionHref && (
               <a
                 href={section.submissionHref}
@@ -58,15 +67,6 @@ export function Participation() {
                 className="inline-flex rounded-md bg-indigo-600 px-5 py-3 font-medium text-white hover:bg-indigo-500"
               >
                 Submit via EasyChair
-              </a>
-            )}
-            {section.cfpPdfHref && (
-              <a
-                href={section.cfpPdfHref}
-                className="text-sm font-bold tracking-wider text-indigo-600 uppercase hover:text-indigo-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 dark:text-indigo-400"
-              >
-                CFP PDF
-                <span aria-hidden="true">&nbsp;↗</span>
               </a>
             )}
           </div>

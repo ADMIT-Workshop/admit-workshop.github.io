@@ -199,13 +199,23 @@ export const workshop: WorkshopData = {
       status: "published",
       items: [
         {
+          label: "Submission deadline",
+          date: "15 November 2026",
+          time: "23:59 AoE",
+          status: "confirmed",
+        },
+        {
+          label: "Notification",
+          date: "30 November 2026",
+          status: "confirmed",
+        },
+        {
           label: "ADMIT workshop",
           date: "20 January 2027",
           time: "14:00–17:30",
           status: "confirmed",
         },
       ],
-      note: "The submission deadline and participation dates are to be announced.",
     },
     participation: {
       id: "participation",
