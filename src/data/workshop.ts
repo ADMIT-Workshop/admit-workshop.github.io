@@ -71,6 +71,10 @@ export interface WorkshopData {
     dates: string;
     href: string;
   };
+  submission: {
+    deadlineIso: string;
+    deadlineLabel: string;
+  };
   schedule: {
     date: string;
     dateIso?: string;
@@ -141,6 +145,11 @@ export const workshop: WorkshopData = {
     dates: "18–20 January 2027",
     href: "https://www.hipeac.net/2027/glasgow/",
   },
+  submission: {
+    // 15 November 2026, 23:59 AoE (UTC−12)
+    deadlineIso: "2026-11-15T23:59:00-12:00",
+    deadlineLabel: "15 November 2026, 23:59 AoE",
+  },
   schedule: {
     date: "20 January 2027",
     dateIso: "2027-01-20",
@@ -164,7 +173,7 @@ export const workshop: WorkshopData = {
       section: "importantDates",
     },
     {
-      label: "Participation",
+      label: "Contribute",
       href: "#participation",
       section: "participation",
     },
