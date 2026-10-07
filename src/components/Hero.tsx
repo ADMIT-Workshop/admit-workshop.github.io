@@ -47,17 +47,8 @@ export function Hero() {
           </div>
         </dl>
 
-        <div className="mt-10 flex flex-col items-start gap-6">
+        <div className="mt-10">
           <SubmissionCountdown />
-          <a
-            href={workshop.links.officialWorkshop.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm font-bold tracking-wider text-indigo-600 uppercase hover:text-indigo-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 dark:text-indigo-400"
-          >
-            Workshop at {workshop.event.name}
-            <span aria-hidden="true">&nbsp;↗</span>
-          </a>
         </div>
       </Container>
     </section>
