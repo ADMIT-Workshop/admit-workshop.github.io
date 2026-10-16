@@ -42,8 +42,9 @@ text. Speaker portraits include meaningful alt text; navigation SVGs are decorat
 For future content images, supply meaningful alt text (or empty alt text for
 purely decorative images).
 
-Shahid Raza's affiliations (University of Glasgow, UK; Research Director of
-Cybersecurity at RISE Research Institutes of Sweden) and
+Shahid Raza's roles (Full Professor and Chair of Cybersecurity; Director of
+Research, School of Computing Science, University of Glasgow, UK; Research
+Director of Cybersecurity at RISE Research Institutes of Sweden) and
 [portrait](https://shahidraza.net/assets/images/shahid.jpg) come from
 [his personal website](https://shahidraza.net/), checked on 16 October 2026. The
 portrait is stored locally at `public/images/speakers/shahid-raza.jpg`.

@@ -79,6 +79,9 @@ export const workshopStructuredData = {
           "@type": "Person",
           name: speaker.name,
           url: speaker.href,
+          jobTitle: speaker.affiliations.flatMap(
+            (affiliation) => affiliation.roles ?? [],
+          ),
           ...(speaker.image && {
             image: new URL(speaker.image, siteUrl).href,
           }),

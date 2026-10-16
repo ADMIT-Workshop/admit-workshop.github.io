@@ -13,19 +13,19 @@ export function Speakers() {
       {section.status === "tba" ? (
         <TbaNotice message={section.tbaMessage ?? "Speakers are forthcoming."} />
       ) : (
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="flex flex-wrap justify-center gap-12">
           {section.items.map((speaker) => (
             <article
               key={speaker.name}
-              className="rounded-xl border border-gray-200 p-6 dark:border-trueGray-700"
+              className="w-full max-w-md text-center"
             >
               {speaker.image && (
                 <Image
                   src={speaker.image}
                   alt={`Portrait of ${speaker.name}`}
-                  width={160}
-                  height={160}
-                  className="mb-5 h-40 w-40 rounded-full object-cover"
+                  width={192}
+                  height={192}
+                  className="mx-auto mb-6 h-48 w-48 rounded-full object-cover"
                 />
               )}
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
@@ -45,10 +45,16 @@ export function Speakers() {
               {speaker.affiliations.map((affiliation) => (
                 <p
                   key={affiliation.name}
-                  className="mt-2 text-gray-600 dark:text-gray-300"
+                  className="mt-4 text-sm leading-6 text-gray-600 dark:text-gray-300"
                 >
-                  {affiliation.role && `${affiliation.role}, `}
-                  {affiliation.name}
+                  {affiliation.roles?.map((role) => (
+                    <span key={role} className="block">
+                      {role}
+                    </span>
+                  ))}
+                  <span className="block font-medium text-gray-800 dark:text-gray-200">
+                    {affiliation.name}
+                  </span>
                 </p>
               ))}
               {speaker.talkTitle && (
