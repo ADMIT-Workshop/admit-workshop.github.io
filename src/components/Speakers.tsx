@@ -17,7 +17,7 @@ export function Speakers() {
           {section.items.map((speaker) => (
             <article
               key={speaker.name}
-              className="w-full max-w-md text-left"
+              className="w-fit max-w-full text-center"
             >
               {speaker.image && (
                 <Image
