@@ -265,7 +265,7 @@ export const workshop: WorkshopData = {
               ],
             },
             {
-              name: "RISE Research Institutes of Sweden",
+              name: "RISE",
               roles: ["Research Director of Cybersecurity"],
             },
           ],

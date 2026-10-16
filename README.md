@@ -44,7 +44,7 @@ purely decorative images).
 
 Shahid Raza's roles (Full Professor and Chair of Cybersecurity; Director of
 Research, School of Computing Science, University of Glasgow, UK; Research
-Director of Cybersecurity at RISE Research Institutes of Sweden) and
+Director of Cybersecurity at RISE) and
 [portrait](https://shahidraza.net/assets/images/shahid.jpg) come from
 [his personal website](https://shahidraza.net/), checked on 16 October 2026. The
 portrait is stored locally at `public/images/speakers/shahid-raza.jpg`.

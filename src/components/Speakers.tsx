@@ -13,7 +13,7 @@ export function Speakers() {
       {section.status === "tba" ? (
         <TbaNotice message={section.tbaMessage ?? "Speakers are forthcoming."} />
       ) : (
-        <div className="flex flex-wrap justify-center gap-12">
+        <div className="grid gap-x-12 gap-y-12 md:grid-cols-2 xl:grid-cols-3">
           {section.items.map((speaker) => (
             <article
               key={speaker.name}
@@ -42,21 +42,31 @@ export function Speakers() {
                   speaker.name
                 )}
               </h3>
-              {speaker.affiliations.map((affiliation) => (
-                <p
-                  key={affiliation.name}
-                  className="mt-4 text-sm leading-6 text-gray-600 dark:text-gray-300"
-                >
-                  {affiliation.roles?.map((role) => (
-                    <span key={role} className="block">
-                      {role}
+              {speaker.affiliations.map((affiliation) => {
+                const singleRole = affiliation.roles?.length === 1;
+
+                return (
+                  <p
+                    key={affiliation.name}
+                    className="mt-4 text-sm leading-6 text-gray-600 dark:text-gray-300"
+                  >
+                    {affiliation.roles?.map((role) => (
+                      <span
+                        key={role}
+                        className={singleRole ? undefined : "block"}
+                      >
+                        {role}
+                        {singleRole && ", "}
+                      </span>
+                    ))}
+                    <span
+                      className={`${singleRole ? "" : "block "}font-medium text-gray-800 dark:text-gray-200`}
+                    >
+                      {affiliation.name}
                     </span>
-                  ))}
-                  <span className="block font-medium text-gray-800 dark:text-gray-200">
-                    {affiliation.name}
-                  </span>
-                </p>
-              ))}
+                  </p>
+                );
+              })}
               {speaker.talkTitle && (
                 <p className="mt-4 font-medium text-gray-800 dark:text-gray-100">
                   {speaker.talkTitle}
