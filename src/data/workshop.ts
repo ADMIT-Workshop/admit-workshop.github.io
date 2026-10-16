@@ -43,7 +43,8 @@ export interface ImportantDate {
 
 export interface Speaker {
   name: string;
-  affiliation: string;
+  affiliations: { name: string; role?: string }[];
+  image?: string;
   talkTitle?: string;
   href?: string;
 }
@@ -251,9 +252,21 @@ export const workshop: WorkshopData = {
       id: "speakers",
       eyebrow: "Programme",
       title: "Invited Speakers",
-      status: "tba",
-      tbaMessage: "Confirmed invited speakers will be announced here.",
-      items: [],
+      status: "published",
+      items: [
+        {
+          name: "Shahid Raza",
+          affiliations: [
+            { name: "University of Glasgow, UK" },
+            {
+              name: "RISE Research Institutes of Sweden",
+              role: "Research Director of Cybersecurity",
+            },
+          ],
+          image: "/images/speakers/shahid-raza.jpg",
+          href: "https://shahidraza.net/",
+        },
+      ],
     },
     program: {
       id: "program",

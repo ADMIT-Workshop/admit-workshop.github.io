@@ -27,9 +27,9 @@ The production-ready static site is generated in `out/`. Run `yarn lint` and `ya
 `src/data/workshop.ts` supplies the page copy and search/social metadata. The
 statically exported HTML contains the full workshop content and JSON-LD for the
 website, page, and workshop, including its HiPEAC association, venue, and published
-organizers. Edit confirmed facts there so the visible page and structured data
-stay aligned. Keep unannounced speakers, submissions, and registration details out
-of structured data until they are published on the page.
+organizers and speakers. Edit confirmed facts there so the visible page and
+structured data stay aligned. Keep unannounced speakers, submissions, and
+registration details out of structured data until they are published on the page.
 
 `src/app/robots.ts` and `src/app/sitemap.ts` export `/robots.txt` and `/sitemap.xml`.
 The sitemap lists only the canonical homepage; section fragments are not separate
@@ -38,9 +38,15 @@ user agents, including search and AI discovery crawlers.
 
 `src/app/share-image.png/route.tsx` renders the 1200 × 630 sharing image at build
 time. Open Graph and Twitter cards include its absolute URL and descriptive alt
-text. The page currently has no content images; navigation SVGs are decorative.
-For any future content images, supply meaningful alt text (or empty alt text for
+text. Speaker portraits include meaningful alt text; navigation SVGs are decorative.
+For future content images, supply meaningful alt text (or empty alt text for
 purely decorative images).
+
+Shahid Raza's affiliations (University of Glasgow, UK; Research Director of
+Cybersecurity at RISE Research Institutes of Sweden) and
+[portrait](https://shahidraza.net/assets/images/shahid.jpg) come from
+[his personal website](https://shahidraza.net/), checked on 16 October 2026. The
+portrait is stored locally at `public/images/speakers/shahid-raza.jpg`.
 
 The editable favicon is `public/favicon.svg`. After changing it, run
 `yarn generate:icons` to update the checked-in ICO and Apple touch icon.

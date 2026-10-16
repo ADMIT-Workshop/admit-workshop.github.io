@@ -74,6 +74,20 @@ export const workshopStructuredData = {
           }),
         })),
       }),
+      ...(workshop.sections.speakers.status === "published" && {
+        performer: workshop.sections.speakers.items.map((speaker) => ({
+          "@type": "Person",
+          name: speaker.name,
+          url: speaker.href,
+          ...(speaker.image && {
+            image: new URL(speaker.image, siteUrl).href,
+          }),
+          affiliation: speaker.affiliations.map((affiliation) => ({
+            "@type": "Organization",
+            name: affiliation.name,
+          })),
+        })),
+      }),
     },
   ],
 };

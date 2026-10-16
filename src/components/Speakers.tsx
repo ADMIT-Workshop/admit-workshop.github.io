@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Section } from "@/components/Section";
 import { TbaNotice } from "@/components/TbaNotice";
 import { workshop } from "@/data/workshop";
@@ -18,6 +19,15 @@ export function Speakers() {
               key={speaker.name}
               className="rounded-xl border border-gray-200 p-6 dark:border-trueGray-700"
             >
+              {speaker.image && (
+                <Image
+                  src={speaker.image}
+                  alt={`Portrait of ${speaker.name}`}
+                  width={160}
+                  height={160}
+                  className="mb-5 h-40 w-40 rounded-full object-cover"
+                />
+              )}
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
                 {speaker.href ? (
                   <a
@@ -32,9 +42,15 @@ export function Speakers() {
                   speaker.name
                 )}
               </h3>
-              <p className="mt-2 text-gray-600 dark:text-gray-300">
-                {speaker.affiliation}
-              </p>
+              {speaker.affiliations.map((affiliation) => (
+                <p
+                  key={affiliation.name}
+                  className="mt-2 text-gray-600 dark:text-gray-300"
+                >
+                  {affiliation.role && `${affiliation.role}, `}
+                  {affiliation.name}
+                </p>
+              ))}
               {speaker.talkTitle && (
                 <p className="mt-4 font-medium text-gray-800 dark:text-gray-100">
                   {speaker.talkTitle}
