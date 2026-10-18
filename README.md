@@ -42,12 +42,13 @@ text. Speaker portraits include meaningful alt text; navigation SVGs are decorat
 For future content images, supply meaningful alt text (or empty alt text for
 purely decorative images).
 
-Shahid Raza's roles (Full Professor and Chair of Cybersecurity; Director of
-Research, School of Computing Science, University of Glasgow, UK; Research
-Director of Cybersecurity at RISE) and
+Shahid Raza's University of Glasgow roles (Full Professor and Chair of
+Cybersecurity; Director of Research, School of Computing Science) and
 [portrait](https://shahidraza.net/assets/images/shahid.jpg) come from
 [his personal website](https://shahidraza.net/), checked on 16 October 2026. The
 portrait is stored locally at `public/images/speakers/shahid-raza.jpg`.
+His RISE role (Research Advisor, Cybersecurity) and keynote designation were
+updated from organizer-provided information on 18 October 2026.
 
 The editable favicon is `public/favicon.svg`. After changing it, run
 `yarn generate:icons` to update the checked-in ICO and Apple touch icon.

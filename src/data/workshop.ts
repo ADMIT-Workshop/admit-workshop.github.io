@@ -266,9 +266,10 @@ export const workshop: WorkshopData = {
             },
             {
               name: "RISE",
-              roles: ["Research Director of Cybersecurity"],
+              roles: ["Research Advisor, Cybersecurity"],
             },
           ],
+          talkTitle: "Keynote",
           image: "/images/speakers/shahid-raza.jpg",
           href: "https://shahidraza.net/",
         },
