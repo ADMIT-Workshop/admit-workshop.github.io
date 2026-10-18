@@ -11,7 +11,7 @@ export function Speakers() {
   return (
     <Section id={section.id} eyebrow={section.eyebrow} title={section.title}>
       {section.status === "tba" ? (
-        <TbaNotice message={section.tbaMessage ?? "Speakers are forthcoming."} />
+        <TbaNotice message={section.tbaMessage ?? "Keynote speakers are forthcoming."} />
       ) : (
         <div className="grid gap-x-12 gap-y-12 md:grid-cols-2 xl:grid-cols-3">
           {section.items.map((speaker) => (

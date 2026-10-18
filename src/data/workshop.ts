@@ -167,7 +167,7 @@ export const workshop: WorkshopData = {
   navigation: [
     { label: "News", href: "#news", section: "news" },
     { label: "About", href: "#about", section: "about" },
-    { label: "Speakers", href: "#speakers", section: "speakers" },
+    { label: "Keynote Speakers", href: "#speakers", section: "speakers" },
     {
       label: "Important Dates",
       href: "#important-dates",
@@ -251,7 +251,7 @@ export const workshop: WorkshopData = {
     speakers: {
       id: "speakers",
       eyebrow: "Programme",
-      title: "Invited Speakers",
+      title: "Keynote Speakers",
       status: "published",
       items: [
         {
