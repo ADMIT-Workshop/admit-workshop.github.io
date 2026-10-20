@@ -1,16 +1,24 @@
 import { Section } from "@/components/Section";
 import { TbaNotice } from "@/components/TbaNotice";
 import { workshop } from "@/data/workshop";
+import type { Organizer, SectionBase } from "@/data/workshop";
 
 export function Organizers() {
-  const section = workshop.sections.organizers;
+  return <PeopleSection section={workshop.sections.organizers} />;
+}
+
+export function ProgramChair() {
+  return <PeopleSection section={workshop.sections.programChair} />;
+}
+
+function PeopleSection({ section }: { section: SectionBase & { items: Organizer[] } }) {
 
   if (section.status === "hidden") return null;
 
   return (
     <Section id={section.id} eyebrow={section.eyebrow} title={section.title}>
       {section.status === "tba" ? (
-        <TbaNotice message={section.tbaMessage ?? "Organizers are forthcoming."} />
+        <TbaNotice message={section.tbaMessage ?? `${section.title} details are forthcoming.`} />
       ) : (
         <div className="grid max-w-4xl gap-5 sm:grid-cols-2">
           {section.items.map((organizer) => (

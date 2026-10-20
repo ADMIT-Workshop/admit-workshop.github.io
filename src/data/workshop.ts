@@ -8,6 +8,7 @@ export type WorkshopSectionKey =
   | "speakers"
   | "program"
   | "organizers"
+  | "programChair"
   | "venue"
   | "contact";
 
@@ -109,6 +110,7 @@ export interface WorkshopData {
       items: ProgramEntry[];
     };
     organizers: SectionBase & { items: Organizer[] };
+    programChair: SectionBase & { items: Organizer[] };
     venue: SectionBase & { summary: string };
     contact: SectionBase & {
       email?: string;
@@ -180,6 +182,7 @@ export const workshop: WorkshopData = {
     },
     { label: "Program", href: "#program", section: "program" },
     { label: "Organizers", href: "#organizers", section: "organizers" },
+    { label: "Program Chair", href: "#program-chair", section: "programChair" },
     { label: "Venue", href: "#venue", section: "venue" },
     { label: "Contact", href: "#contact", section: "contact" },
   ],
@@ -304,6 +307,30 @@ export const workshop: WorkshopData = {
           href: "https://www.hipeac.net/~magnus.almgren9/",
         },
         {
+          name: "Luigi Altamura",
+          role: "Web Chair",
+          affiliation: "Chalmers University of Technology",
+          href: "https://www.linkedin.com/in/luigi-altamura/",
+        },
+      ],
+    },
+    programChair: {
+      id: "program-chair",
+      eyebrow: "People",
+      title: "Program Chair",
+      status: "published",
+      items: [
+        {
+          name: "Pedro Trancoso",
+          role: "Program Committee",
+          affiliation: "Chalmers University of Technology",
+        },
+        {
+          name: "Magnus Almgren",
+          role: "Program Committee",
+          affiliation: "Chalmers University of Technology",
+        },
+        {
           name: "Marjan Sirjani",
           role: "Program Committee",
           affiliation: "Mälardalen University and KTH",
@@ -325,9 +352,8 @@ export const workshop: WorkshopData = {
         },
         {
           name: "Luigi Altamura",
-          role: "Web Chair",
+          role: "Program Committee",
           affiliation: "Chalmers University of Technology",
-          href: "https://www.linkedin.com/in/luigi-altamura/",
         },
       ],
     },
