@@ -304,6 +304,26 @@ export const workshop: WorkshopData = {
           href: "https://www.hipeac.net/~magnus.almgren9/",
         },
         {
+          name: "Marjan Sirjani",
+          role: "Program Committee",
+          affiliation: "Mälardalen University and KTH",
+        },
+        {
+          name: "Alexandre Graell i Amat",
+          role: "Program Committee",
+          affiliation: "Chalmers University of Technology",
+        },
+        {
+          name: "Mikael Asplund",
+          role: "Program Committee",
+          affiliation: "Linköping University",
+        },
+        {
+          name: "Behrooz Sangchoolie",
+          role: "Program Committee",
+          affiliation: "RISE",
+        },
+        {
           name: "Luigi Altamura",
           role: "Web Chair",
           affiliation: "Chalmers University of Technology",
