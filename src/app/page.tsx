@@ -4,7 +4,7 @@ import { Contact } from "@/components/Contact";
 import { Hero } from "@/components/Hero";
 import { ImportantDates } from "@/components/ImportantDates";
 import { News } from "@/components/News";
-import { Organizers, ProgramChair } from "@/components/Organizers";
+import { People } from "@/components/Organizers";
 import { Participation } from "@/components/Participation";
 import { Program } from "@/components/Program";
 import { Speakers } from "@/components/Speakers";
@@ -59,8 +59,7 @@ export default function Home() {
       <ImportantDates />
       <Participation />
       <Program />
-      <Organizers />
-      <ProgramChair />
+      <People />
       <Venue />
       <Contact />
     </main>

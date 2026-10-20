@@ -3,20 +3,29 @@ import { TbaNotice } from "@/components/TbaNotice";
 import { workshop } from "@/data/workshop";
 import type { Organizer, SectionBase } from "@/data/workshop";
 
-export function Organizers() {
-  return <PeopleSection section={workshop.sections.organizers} />;
+export function People() {
+  const groups = [workshop.sections.programChair, workshop.sections.organizers];
+  if (groups.every((group) => group.status === "hidden")) return null;
+
+  return (
+    <Section id="people" eyebrow={workshop.acronym} title="People">
+      <div className="space-y-12">
+        {groups.map((group) => (
+          <PeopleGroup key={group.id} section={group} />
+        ))}
+      </div>
+    </Section>
+  );
 }
 
-export function ProgramChair() {
-  return <PeopleSection section={workshop.sections.programChair} />;
-}
-
-function PeopleSection({ section }: { section: SectionBase & { items: Organizer[] } }) {
-
+function PeopleGroup({ section }: { section: SectionBase & { items: Organizer[] } }) {
   if (section.status === "hidden") return null;
 
   return (
-    <Section id={section.id} eyebrow={section.eyebrow} title={section.title}>
+    <div id={section.id} role="group" aria-labelledby={`${section.id}-heading`} className="scroll-mt-36">
+      <h3 id={`${section.id}-heading`} className="mb-6 text-2xl font-semibold text-gray-800 dark:text-white">
+        {section.title}
+      </h3>
       {section.status === "tba" ? (
         <TbaNotice message={section.tbaMessage ?? `${section.title} details are forthcoming.`} />
       ) : (
@@ -26,7 +35,7 @@ function PeopleSection({ section }: { section: SectionBase & { items: Organizer[
               key={organizer.name}
               className="rounded-xl border border-gray-200 p-6 dark:border-trueGray-700"
             >
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
+              <h4 className="text-xl font-semibold text-gray-900 dark:text-white">
                 {organizer.href ? (
                   <a
                     href={organizer.href}
@@ -40,7 +49,7 @@ function PeopleSection({ section }: { section: SectionBase & { items: Organizer[
                 ) : (
                   organizer.name
                 )}
-              </h3>
+              </h4>
               <p className="mt-2 font-medium text-indigo-600 dark:text-indigo-400">
                 {organizer.role}
               </p>
@@ -53,6 +62,6 @@ function PeopleSection({ section }: { section: SectionBase & { items: Organizer[
           ))}
         </div>
       )}
-    </Section>
+    </div>
   );
 }
