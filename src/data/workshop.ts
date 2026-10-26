@@ -10,6 +10,7 @@ export type WorkshopSectionKey =
   | "organizers"
   | "programChair"
   | "venue"
+  | "acknowledgements"
   | "contact";
 
 export interface SectionBase {
@@ -112,6 +113,7 @@ export interface WorkshopData {
     organizers: SectionBase & { items: Organizer[] };
     programChair: SectionBase & { items: Organizer[] };
     venue: SectionBase & { summary: string };
+    acknowledgements: SectionBase & { summary: string; link: WorkshopLink };
     contact: SectionBase & {
       email?: string;
       summary?: string;
@@ -183,6 +185,7 @@ export const workshop: WorkshopData = {
     { label: "Program", href: "#program", section: "program" },
     { label: "People", href: "#people", section: "organizers" },
     { label: "Venue", href: "#venue", section: "venue" },
+    { label: "Acknowledgements", href: "#acknowledgements", section: "acknowledgements" },
     { label: "Contact", href: "#contact", section: "contact" },
   ],
   sections: {
@@ -350,6 +353,11 @@ export const workshop: WorkshopData = {
           affiliation: "RISE",
         },
         {
+          name: "Kim Strandberg",
+          role: "Program Committee",
+          affiliation: "Volvo Cars",
+        },
+        {
           name: "Luigi Altamura",
           role: "Program Committee",
           affiliation: "Chalmers University of Technology",
@@ -363,6 +371,18 @@ export const workshop: WorkshopData = {
       status: "published",
       summary:
         "ADMIT will take place at the Scottish Event Campus in Glasgow. Room: M4.",
+    },
+    acknowledgements: {
+      id: "acknowledgements",
+      eyebrow: "Support",
+      title: "Acknowledgements",
+      status: "published",
+      summary:
+        "We gratefully acknowledge the support of the MAGIC project (Meeting Automotive Liability Challenges through Forensic Soundness).",
+      link: {
+        label: "MAGIC project website",
+        href: "https://magic-ffi-project.github.io/",
+      },
     },
     contact: {
       id: "contact",

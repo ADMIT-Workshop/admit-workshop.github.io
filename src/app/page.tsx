@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { About } from "@/components/About";
+import { Acknowledgements } from "@/components/Acknowledgements";
 import { Contact } from "@/components/Contact";
 import { Hero } from "@/components/Hero";
 import { ImportantDates } from "@/components/ImportantDates";
@@ -61,6 +62,7 @@ export default function Home() {
       <Program />
       <People />
       <Venue />
+      <Acknowledgements />
       <Contact />
     </main>
   );
