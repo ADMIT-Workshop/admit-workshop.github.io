@@ -27,6 +27,12 @@ export function ImportantDates() {
                     "TBD"
                   ) : (
                     <>
+                      {item.previousDate && (
+                        <>
+                          <del className="mr-3 text-gray-500 dark:text-gray-400">{item.previousDate}</del>
+                          <span className="mr-2 font-semibold text-indigo-600 dark:text-indigo-400">Extended:</span>
+                        </>
+                      )}
                       {item.date}
                       {item.time && ` · ${item.time}`}
                     </>

@@ -15,7 +15,7 @@ function formatRemaining(ms: number) {
 }
 
 export function SubmissionCountdown() {
-  const { deadlineIso } = workshop.submission;
+  const { deadlineIso, deadlineLabel, previousDeadlineLabel } = workshop.submission;
   const section = workshop.sections.participation;
   const deadline = Date.parse(deadlineIso);
   // Rendered only after mount so the static HTML never disagrees with the client clock.
@@ -39,17 +39,26 @@ export function SubmissionCountdown() {
         <span aria-hidden="true">&nbsp;↓</span>
       </a>
       <span className="text-sm font-semibold uppercase tracking-wide text-gray-500 tabular-nums dark:text-gray-400">
-        {now === null ? (
-          <>Deadline {workshop.submission.deadlineLabel}</>
-        ) : (
+        {previousDeadlineLabel ? (
           <>
-            Closes in{" "}
-            <time dateTime={deadlineIso} className="text-gray-900 dark:text-white">
-              {formatRemaining(deadline - now)}
-            </time>
+            <del className="mr-3">{previousDeadlineLabel}</del>
+            <span className="text-indigo-600 dark:text-indigo-400">Extended: </span>
           </>
+        ) : (
+          <>Deadline </>
         )}
+        <time dateTime={deadlineIso} className="text-gray-900 dark:text-white">
+          {deadlineLabel}
+        </time>
       </span>
+      {now !== null && (
+        <span className="text-sm font-semibold uppercase tracking-wide text-gray-500 tabular-nums dark:text-gray-400">
+          Closes in{" "}
+          <span className="text-gray-900 dark:text-white">
+            {formatRemaining(deadline - now)}
+          </span>
+        </span>
+      )}
     </div>
   );
 }

@@ -39,6 +39,7 @@ export interface NewsItem {
 export interface ImportantDate {
   label: string;
   date: string;
+  previousDate?: string;
   time?: string;
   status: "confirmed" | "tba";
 }
@@ -77,6 +78,7 @@ export interface WorkshopData {
   submission: {
     deadlineIso: string;
     deadlineLabel: string;
+    previousDeadlineLabel?: string;
   };
   schedule: {
     date: string;
@@ -151,9 +153,10 @@ export const workshop: WorkshopData = {
     href: "https://www.hipeac.net/2027/glasgow/",
   },
   submission: {
-    // 15 November 2026, 23:59 AoE (UTC−12)
-    deadlineIso: "2026-11-15T23:59:00-12:00",
-    deadlineLabel: "15 November 2026, 23:59 AoE",
+    // 30 November 2026, 23:59 AoE (UTC−12)
+    deadlineIso: "2026-11-30T23:59:00-12:00",
+    deadlineLabel: "30 November 2026, 23:59 AoE",
+    previousDeadlineLabel: "15 November 2026",
   },
   schedule: {
     date: "20 January 2027",
@@ -215,14 +218,15 @@ export const workshop: WorkshopData = {
       items: [
         {
           label: "Submission deadline",
-          date: "15 November 2026",
+          date: "30 November 2026",
+          previousDate: "15 November 2026",
           time: "23:59 AoE",
           status: "confirmed",
         },
         {
           label: "Notification",
-          date: "30 November 2026",
-          status: "confirmed",
+          date: "TBD",
+          status: "tba",
         },
         {
           label: "ADMIT workshop",
